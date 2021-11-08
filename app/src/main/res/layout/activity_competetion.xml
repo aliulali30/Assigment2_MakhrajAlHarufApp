@@ -23,13 +23,15 @@
         android:layout_height="58dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="73dp"
         android:background="@color/cardview_light_background"
         android:backgroundTint="#82D620"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Round - 1"
+        android:text="Round - 1/10"
         android:textAlignment="center"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -42,16 +44,18 @@
         android:cropToPadding="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_bias="0.196"
         app:srcCompat="@drawable/back" />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="331dp"
         android:layout_height="58dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:backgroundTint="@android:color/holo_green_light"
         android:ems="10"
@@ -61,22 +65,122 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewComp"
         android:layout_width="228dp"
         android:layout_height="59dp"
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/white"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_light"
-        android:textSize="20sp"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="384dp"
+        android:layout_height="334dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewComp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Lahatiyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Halqiyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Shajariyah- Haafiyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Tarfiyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Nit-eeyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Lisaveyah"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="@android:color/white"
+            android:text="Ghunna"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitAns"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="Submit Answer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
