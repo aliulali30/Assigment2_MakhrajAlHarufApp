@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp">
         <activity
+            android:name=".Practice"
+            android:exported="true" />
+        <activity
             android:name=".Results"
             android:exported="true" />
         <activity

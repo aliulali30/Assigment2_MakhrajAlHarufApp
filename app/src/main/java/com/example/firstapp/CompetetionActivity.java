@@ -24,7 +24,6 @@ public class CompetetionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_competetion);
         char[] arbiAlphabet={'ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ط','ظ','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ي'};
-
        Roundtext=findViewById(R.id.textViewRound);
        resultText=findViewById(R.id.textViewResult);
         rg=findViewById(R.id.radioGroup);
