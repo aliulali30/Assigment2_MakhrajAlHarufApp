@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class CompetetionActivity extends AppCompatActivity {
-     TextView CompText,Roundtext ;
+     TextView CompText,Roundtext,resultText ;
       Button submit;
       int Number_of_rounds=0,score=0;
       RadioGroup rg;
@@ -25,43 +26,68 @@ public class CompetetionActivity extends AppCompatActivity {
         char[] arbiAlphabet={'ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ط','ظ','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ي'};
 
        Roundtext=findViewById(R.id.textViewRound);
+       resultText=findViewById(R.id.textViewResult);
         rg=findViewById(R.id.radioGroup);
+        for(int i=0;i< rg.getChildCount();i++)
+            rg.getChildAt(i).setEnabled(false);
 
-        submit=findViewById(R.id.submitAns);
+        submit=findViewById(R.id.btShare);
        submit.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                if(Number_of_rounds>0 && Number_of_rounds<=10) {
+
                    String roundTitle="Round "+Number_of_rounds+"/10";
                    Roundtext.setText(roundTitle);
                    char correctAns;
-                   correctAns = showCharacter(arbiAlphabet);
+                   String s= CompText.getText().toString();
+                   correctAns=s.charAt(0);
                    int CorrectoptionNumber = corrctOptionNumber(correctAns);
                    int markoptionNumber = MakrOptionNumber();
 
                    if (markoptionNumber == CorrectoptionNumber) {
                        score += 1;
+                       resultText.setText("correct");
+
                    }
+                   else resultText.setText("false");
+
                    Number_of_rounds++;
                    rg.clearCheck();
+                   showCharacter(arbiAlphabet);
                }
                else if(Number_of_rounds<=0)
                {
+                   for(int i=0;i< rg.getChildCount();i++)
+                       rg.getChildAt(i).setEnabled(true);
+
                    submit.setText("Submit Answer");
                    Number_of_rounds++;
                    String roundTitle="Round "+Number_of_rounds+"/10";
                    Roundtext.setText(roundTitle);
+                   showCharacter(arbiAlphabet);
                }
 
-               if(Number_of_rounds>10){
+               if(Number_of_rounds==10){
+
                    submit.setText("final submit");
+               }
+
+               if(Number_of_rounds==11){
+                   for(int i=0;i< rg.getChildCount();i++)
+                       rg.getChildAt(i).setEnabled(false);
+                   CompText.setText("-----");
+                   submit.setText("See Results");
+                   Number_of_rounds++;
+               }
+               if(Number_of_rounds==12){
+                   openResultActivity(score);
                }
 
            }
        });
 
     }
-
     public char showCharacter(char[] arbiAlphabet){
         Random random= new Random();
         int rand=random.nextInt(29);
@@ -140,6 +166,12 @@ public class CompetetionActivity extends AppCompatActivity {
         return 7;
 
     return 0;
+    }
+
+    void openResultActivity(int score){
+        //always opne activity in separate funcation
+        Intent intent=new Intent(this,Results.class);
+        startActivity(intent);
     }
 }
 
