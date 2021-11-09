@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewComp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/lah"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -90,7 +90,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/hal"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -100,7 +100,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/shaj"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -110,7 +110,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/tarf"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -120,7 +120,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/nit"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -130,7 +130,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/lisa"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"
@@ -140,7 +140,7 @@
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/ghun"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="@android:color/white"

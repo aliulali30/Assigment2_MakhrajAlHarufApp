@@ -73,6 +73,10 @@ public class CompetetionActivity extends AppCompatActivity {
                    submit.setText("final submit");
                }
 
+               if(Number_of_rounds==12){
+                   openResultActivity(score);
+               }
+
                if(Number_of_rounds==11){
                    for(int i=0;i< rg.getChildCount();i++)
                        rg.getChildAt(i).setEnabled(false);
@@ -80,9 +84,7 @@ public class CompetetionActivity extends AppCompatActivity {
                    submit.setText("See Results");
                    Number_of_rounds++;
                }
-               if(Number_of_rounds==12){
-                   openResultActivity(score);
-               }
+
 
            }
        });
@@ -100,8 +102,8 @@ public class CompetetionActivity extends AppCompatActivity {
     }
 
     public int corrctOptionNumber(char ch){
-       char[] Halqiyah={'ا','ه','ع','غ','خ','ح'};
         char[] Lahatiyah={'ق','ک'};
+        char[] Halqiyah={'ا','ه','ع','غ','خ','ح'};
         char[] ShajariyahـHaafiyah={'ج','ش','ی','ض'};
         char[] Tarfiyah={'ل','ن','ر'};
         char[] Nitـeeyah={'ت','د','ط'};
@@ -142,13 +144,13 @@ public class CompetetionActivity extends AppCompatActivity {
 
     int MakrOptionNumber(){
         RadioButton Halqiyah,Lahatiyah,Shajariyah_Haafiyah,Tarfiyah,Nit_eeyah,Lisaveyah,Ghunna;
-    Halqiyah=findViewById(R.id.radioButton);
-    Lahatiyah=findViewById(R.id.radioButton2);
-    Shajariyah_Haafiyah=findViewById(R.id.radioButton3);
-    Tarfiyah=findViewById(R.id.radioButton4);
-    Nit_eeyah=findViewById(R.id.radioButton5);
-    Lisaveyah=findViewById(R.id.radioButton6);
-    Ghunna=findViewById(R.id.radioButton7);
+    Lahatiyah=findViewById(R.id.lah);
+    Halqiyah=findViewById(R.id.hal);
+    Shajariyah_Haafiyah=findViewById(R.id.shaj);
+    Tarfiyah=findViewById(R.id.tarf);
+    Nit_eeyah=findViewById(R.id.nit);
+    Lisaveyah=findViewById(R.id.lisa);
+    Ghunna=findViewById(R.id.ghun);
 
     if(Lahatiyah.isChecked())
         return 1;
@@ -170,7 +172,8 @@ public class CompetetionActivity extends AppCompatActivity {
 
     void openResultActivity(int score){
         //always opne activity in separate funcation
-        Intent intent=new Intent(this,Results.class);
+        Intent intent=new Intent(CompetetionActivity.this,Results.class);
+        intent.putExtra("score",Integer.toString(score));
         startActivity(intent);
     }
 }

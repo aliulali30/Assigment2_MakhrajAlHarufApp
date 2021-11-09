@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoreText"
+        app:layout_constraintTop_toBottomOf="@+id/textv"
         app:layout_constraintVertical_bias="0.741" />
 
     <TextView
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/scoreText"
+        android:id="@+id/textv"
         android:layout_width="206dp"
         android:layout_height="65dp"
         android:background="@android:color/black"
@@ -67,11 +67,11 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintEnd_toStartOf="@+id/scoreText"
+        app:layout_constraintTop_toTopOf="@+id/scoreText" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/scoreText"
         android:layout_width="99dp"
         android:layout_height="65dp"
         android:background="@android:color/black"
