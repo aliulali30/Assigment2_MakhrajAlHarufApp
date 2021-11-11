@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/drawable/ic_launchers_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_answer_detail.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_competetion.xml" value="0.264" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_results.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_practice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_results.xml" value="0.264" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/activity_user_practice.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/layout/pactice.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/mipmap-anydpi-v26/ic_launchers.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/FirstApp/app/src/main/res/mipmap-anydpi-v26/ic_launchers_round.xml" value="0.14635416666666667" />
       </map>
     </option>
   </component>

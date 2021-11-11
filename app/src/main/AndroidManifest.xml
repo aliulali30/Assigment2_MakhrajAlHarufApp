@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp">
         <activity
-            android:name=".Practice"
+            android:name=".userPractice"
             android:exported="true" />
         <activity
             android:name=".Results"

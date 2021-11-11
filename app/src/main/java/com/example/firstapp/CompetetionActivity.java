@@ -17,6 +17,8 @@ public class CompetetionActivity extends AppCompatActivity {
       Button submit;
       int Number_of_rounds=0,score=0;
       RadioGroup rg;
+      public char[] correctAnsList=new char[10];
+      public char[] correctAnsOption= new char[10];
 
 
     @Override
@@ -35,7 +37,6 @@ public class CompetetionActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                if(Number_of_rounds>0 && Number_of_rounds<=10) {
-
                    String roundTitle="Round "+Number_of_rounds+"/10";
                    Roundtext.setText(roundTitle);
                    char correctAns;
@@ -111,15 +112,15 @@ public class CompetetionActivity extends AppCompatActivity {
 
         for(int i=0;i<2;i++)
             if(ch==Lahatiyah[i])
-                return 1 ;
+                return 1;
 
         for(int i=0;i<6;i++)
             if(ch==Halqiyah[i])
-                return 2 ;
+                return 2;
 
         for(int i=0;i<4;i++)
             if(ch==ShajariyahـHaafiyah[i])
-                return 3 ;
+                return 3;
 
         for(int i=0;i<3;i++)
             if(ch==Tarfiyah[i])

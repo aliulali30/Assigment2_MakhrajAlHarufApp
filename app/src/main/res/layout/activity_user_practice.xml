@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userPractice">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="417dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="449dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mainhurf" />
+
+    <Button
+        android:id="@+id/halqiyah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:text="Halqiyah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/shajriyah"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/lahatiyah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="44dp"
+        android:text="Lahatiyah"
+        app:layout_constraintEnd_toEndOf="@+id/tarfiyah"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/halqiyah"
+        app:layout_constraintTop_toTopOf="@+id/halqiyah" />
+
+    <Button
+        android:id="@+id/shajriyah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="shajriyah"
+        app:layout_constraintStart_toStartOf="@+id/niteeyah"
+        app:layout_constraintTop_toBottomOf="@+id/halqiyah" />
+
+    <Button
+        android:id="@+id/tarfiyah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Tarfiyah"
+        app:layout_constraintEnd_toEndOf="@+id/lisaveryah"
+        app:layout_constraintTop_toBottomOf="@+id/lahatiyah" />
+
+    <Button
+        android:id="@+id/niteeyah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="Nit-eeyah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shajriyah"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/lisaveryah"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Lisaveyah"
+        app:layout_constraintStart_toEndOf="@+id/niteeyah"
+        app:layout_constraintTop_toBottomOf="@+id/tarfiyah" />
+
+    <Button
+        android:id="@+id/ghunna"
+        android:layout_width="130dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="290dp"
+        android:text="Ghunna"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.134" />
+</androidx.constraintlayout.widget.ConstraintLayout>
