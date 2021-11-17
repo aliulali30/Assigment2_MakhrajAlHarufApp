@@ -172,9 +172,18 @@ public class CompetetionActivity extends AppCompatActivity {
 
     void openResultActivity(int score){
         //always opne activity in separate funcation
+        int[] scoreArray=new int[10];
+        char[] ch=new char[10];
+
+        Bundle bundle=new Bundle();
+        bundle.putCharArray("correctAns",ch);
+        bundle.putIntArray("scoreArray",scoreArray);
+        bundle.putInt("score",score);
+
         Intent intent=new Intent(CompetetionActivity.this,Results.class);
-        intent.putExtra("score",Integer.toString(score));
+        intent.putExtras(bundle);
         startActivity(intent);
     }
+
 }
 

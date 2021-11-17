@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import javax.xml.transform.Result;
+
 public class Results extends AppCompatActivity {
-     Button share,menu;
+     Button share,menu,detail;
      TextView score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +22,12 @@ public class Results extends AppCompatActivity {
     menu=findViewById(R.id.btMenu);
 
     score=findViewById(R.id.scoreText);
+
+    //Get intent and bundle;
     Intent intent=getIntent();
-    score.setText(intent.getStringExtra("score"));
+    Bundle bundle=intent.getExtras();
+    int scoreValue=bundle.getInt("score");
+    score.setText(Integer.toString(scoreValue));
 
     menu.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -41,10 +47,24 @@ public class Results extends AppCompatActivity {
         }
     });
 
+    detail=findViewById(R.id.detail);
+    detail.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            openResultDetail(bundle);
+        }
+    });
     }
 
     void openMainActivity(){
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
+    }
+
+    void openResultDetail(Bundle bundle){
+        Intent intent=new Intent(Results.this,ResultDetail.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+
     }
 }
