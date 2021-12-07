@@ -3,13 +3,17 @@ package com.example.firstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-
+import androidx.appcompat.widget.Toolbar;
 import java.util.Random;
 
 public class CompetetionActivity extends AppCompatActivity {
@@ -17,6 +21,8 @@ public class CompetetionActivity extends AppCompatActivity {
       Button submit;
       int Number_of_rounds=0,score=0;
       RadioGroup rg;
+      Toolbar tool;
+
       public char[] correctAnsList=new char[10];
       public char[] correctAnsOption= new char[10];
 
@@ -28,6 +34,9 @@ public class CompetetionActivity extends AppCompatActivity {
         char[] arbiAlphabet={'ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ط','ظ','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ي'};
        Roundtext=findViewById(R.id.textViewRound);
        resultText=findViewById(R.id.textViewResult);
+      tool=findViewById(R.id.toolbar1);
+      setSupportActionBar(tool);
+
         rg=findViewById(R.id.radioGroup);
         for(int i=0;i< rg.getChildCount();i++)
             rg.getChildAt(i).setEnabled(false);
@@ -183,6 +192,49 @@ public class CompetetionActivity extends AppCompatActivity {
         Intent intent=new Intent(CompetetionActivity.this,Results.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.practice: {
+                openPracticeActivity();
+                Log.d("menu", "onOptionsItemSelected: practice");
+                break;
+            }
+            case R.id.git: {
+                Uri uri = Uri.parse("https://github.com/aliulali30/Assigment2_MakhrajAlHarufApp");
+                Intent webintent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(webintent);
+                Log.d("menu", "onOptionsItemSelected: git");
+                break;
+            }
+            case R.id.exam: {
+                OpenCompetitionActivity();
+                Log.d("menu", "onOptionsItemSelected: exam");
+                break;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return false;
+    }
+
+    public  void OpenCompetitionActivity(){
+        Intent intent = new Intent(this,CompetetionActivity.class);
+        startActivity(intent) ;
+    }
+
+    public void openPracticeActivity(){
+        Intent intent2=new Intent(this,userPractice.class);
+        startActivity(intent2);
     }
 
 }

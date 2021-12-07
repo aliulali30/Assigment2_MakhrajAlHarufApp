@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="137dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="121dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="#D65F5F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar" />
@@ -47,14 +47,14 @@
         android:id="@+id/textViewRound"
         android:layout_width="213dp"
         android:layout_height="59dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="78dp"
         android:background="@android:color/holo_green_light"
         android:text="Results"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,5 +110,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.458" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Makhraj App"
+        app:titleTextColor="@android:color/black" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
