@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -28,7 +29,8 @@ public class Results extends AppCompatActivity {
 
     tool=findViewById(R.id.toolbar1);
     setSupportActionBar(tool);
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     score=findViewById(R.id.scoreText);
 
     //Get intent and bundle;

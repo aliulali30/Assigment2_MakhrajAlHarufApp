@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -36,6 +37,8 @@ public class CompetetionActivity extends AppCompatActivity {
        resultText=findViewById(R.id.textViewResult);
       tool=findViewById(R.id.toolbar1);
       setSupportActionBar(tool);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         rg=findViewById(R.id.radioGroup);
         for(int i=0;i< rg.getChildCount();i++)

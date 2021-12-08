@@ -15,13 +15,18 @@
             android:exported="true" />
         <activity
             android:name=".userPractice"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Results"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".CompetetionActivity"
+            />
         <activity
             android:name=".CompetetionActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
